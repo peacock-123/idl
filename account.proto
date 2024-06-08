@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package account;
+
+service AccountService {
+  rpc SignIn(SignInRequest) returns (SignInResponse) {}
+}
+
+enum AuthProvider {
+  GOOGLE = 0;
+  KAKAO = 1;
+  NAVER = 2;
+}
+
+message SignInRequest {
+  AuthProvider provider = 1;
+  string code = 2;
+}
+
+message SignInResponse {
+  int64 id = 1;
+}
