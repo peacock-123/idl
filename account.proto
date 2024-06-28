@@ -18,5 +18,5 @@ message SignInRequest {
 }
 
 message SignInResponse {
-  int64 id = 1;
+  string id = 1;
 }
